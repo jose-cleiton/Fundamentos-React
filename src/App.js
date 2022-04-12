@@ -1,10 +1,18 @@
-import "./styles.css";
+import React from "react";
+import "./index.css";
+import Aleatorio from "./components/basicos/Aleatorio";
+import Primeiro from "./components/basicos/Primeiro";
+import ComParametro from "./components/basicos/ComParametro";
+import Card from "./components/layout/Card";
 
-export default function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
-}
+export default () => (
+  <div>
+    <h1>Fundamentos React</h1>
+    <Card titulo="Desafio Aleatório">
+      <Aleatorio min={1} max={60} />
+    </Card>
+
+    <Primeiro />
+    <ComParametro titulo="Segundo componente" subtitulo="Deu certo!" />
+  </div>
+);
